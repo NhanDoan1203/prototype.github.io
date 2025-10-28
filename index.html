@@ -1,177 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gymer App Prototype</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000; /* Black for strength */
-            color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 375px; /* Mobile width */
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(to bottom, #000000, #2E8B57); /* Black to green gradient */
-            min-height: 100vh;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        h1, h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            text-align: center;
-        }
-        button {
-            background-color: #FF4500; /* Red for energy */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2E8B57; /* Green on hover */
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .page {
-            display: none;
-        }
-        .active {
-            display: block;
-        }
-        .card {
-            background-color: white;
-            color: black;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .tabs {
-            display: flex;
-            justify-content: space-around;
-            background-color: #333;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            max-width: 375px;
-        }
-        .tab-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .tab-button.active {
-            color: #FF4500;
-        }
-        /* Gym Theme Elements */
-        .icon {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-        .motivational {
-            text-align: center;
-            font-style: italic;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Survey Page -->
-        <div id="survey" class="page active">
-            <h1>🏋️ Welcome to Gymer!</h1>
-            <p class="motivational">"Sweat today, shine tomorrow!"</p>
-            <div class="card">
-                <h2>Quick Survey: Tell Us About You</h2>
-                <label>What's your primary gym goal?</label>
-                <input type="text" placeholder="e.g., Build Muscle">
-                <label>Preferred workout style?</label>
-                <input type="text" placeholder="e.g., Weights">
-                <label>Fitness level?</label>
-                <input type="text" placeholder="e.g., Beginner">
-                <button onclick="showPage('login')">Next</button>
-            </div>
-        </div>
-
-        <!-- Login Page -->
-        <div id="login" class="page">
-            <h1>🔐 Gymer Login</h1>
-            <p class="motivational">"Unlock your perfect workout partner!"</p>
-            <div class="card">
-                <label>Email</label>
-                <input type="email" placeholder="your@email.com">
-                <label>Password</label>
-                <input type="password" placeholder="password">
-                <button onclick="showPage('home')">Log In</button>
-                <button onclick="showPage('survey')">Back to Survey</button>
-            </div>
-        </div>
-
-        <!-- Home Tab -->
-        <div id="home" class="page">
-            <h1>🏠 Home: Find Your Match</h1>
-            <p class="motivational">"Swipe right for gains!"</p>
-            <div class="card">
-                <h2>Quick Poll: What Do You Want Today?</h2>
-                <button onclick="alert('Filtered to Weights!')">Weights 💪</button>
-                <button onclick="alert('Filtered to Cardio!')">Cardio 🏃</button>
-                <p>Current Preference: Weights</p>
-            </div>
-            <div class="card">
-                <h2>Swipe Cards (Prototype)</h2>
-                <p>Profile: Alex, 25 - Loves Deadlifts</p>
-                <button onclick="alert('Matched!')">Swipe Right</button>
-                <button onclick="alert('Passed!')">Swipe Left</button>
-            </div>
-        </div>
-
-        <!-- Calendar Page -->
-        <div id="calendar" class="page">
-            <h1>📅 Calendar: Plan Your Sessions</h1>
-            <p class="motivational">"Consistency is key – schedule your gains!"</p>
-            <div class="card">
-                <h2>Workout Calendar</h2>
-                <p>Mock Calendar: Select a date to schedule.</p>
-                <button onclick="alert('Session booked!')">Book Leg Day - Tomorrow</button>
-                <button onclick="alert('Session booked!')">Book HIIT - Friday</button>
-            </div>
-        </div>
-
-        <!-- Subscription Page (Figma Markup Style) -->
-        <div id="subscription" class="page">
-            <h1>💳 Level Up Your Gymer Game</h1>
-            <p class="motivational">"Get More Matches, Build Your Squad!"</p>
-            <div class="card">
-                <h2>🏆 Start Free Trial – 7 Days Unlimited Swipes</h2>
-                <p>Swipe through 50+ gymers daily and find your perfect partner.</p>
-                <button onclick="alert('Trial Started!')">Try Now</button>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <div class="card" style="width: 45%;">
-                    <h2>🏋️ Gym Buddy Boost</h2>
-                    <p>• 5x More Matches (250+ gymers/week)</p>
-                    <p>• Priority Visibility</p>
                     <p>• Advanced Scheduling</p>
-                    <p style="color: #2E8B57; font-weight: bold;">$4.99/month</p>
+                    <p style="color: #FFFFFF; font-weight: bold;">$4.99/month</p>
                     <button onclick="alert('Upgraded!')">Upgrade</button>
                 </div>
                 <div class="card" style="width: 45%;">
@@ -179,21 +7,20 @@
                     <p>• Unlimited Matches (1000+ gymers globally)</p>
                     <p>• VIP Status</p>
                     <p>• Partner Perks (e.g., gym discounts)</p>
-                    <p style="color: #FF4500; font-weight: bold;">$9.99/month</p>
+                    <p style="color: #FFFFFF; font-weight: bold;">$9.99/month</p>
                     <button onclick="alert('Pro Activated!')">Go Pro</button>
                 </div>
             </div>
-            <p style="text-align: center; font-size: 12px; color: gray;">Cancel anytime. No hidden fees.</p>
+            <p style="text-align: center; font-size: 12px; color: #CCCCCC;">Cancel anytime. No hidden fees.</p>
         </div>
-
-        <!-- Bottom Tabs -->
+        <!-- Bottom Tabs (Adjusted to fit better) -->
         <div class="tabs">
             <button class="tab-button active" onclick="showPage('home')">Home</button>
             <button class="tab-button" onclick="showPage('calendar')">Calendar</button>
+            <button class="tab-button" onclick="showPage('login')">Login</button>
             <button class="tab-button" onclick="showPage('subscription')">Subscription</button>
         </div>
     </div>
-
     <script>
         function showPage(pageId) {
             // Hide all pages
